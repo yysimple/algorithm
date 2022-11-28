@@ -22,6 +22,22 @@ public class LinkNode<T> {
         this.val = val;
     }
 
+    public LinkNode<T> setNext(T val) {
+        this.next = new LinkNode<T>(val, null);
+        return this.next;
+    }
+
+    /**
+     * 单向链表
+     *
+     * @param next
+     * @param val
+     */
+    public LinkNode(T val, LinkNode<T> next) {
+        this.next = next;
+        this.val = val;
+    }
+
     public static <T> String printNode(LinkNode<T> node) {
         if (node == null) {
             return "什么玩意？";

@@ -7,7 +7,7 @@ import org.junit.Test;
 /**
  * 项目: algorithm
  * <p>
- * 功能描述: 合并两个有序链表
+ * 功能描述: 合并两个有序链表，lc的21题
  *
  * @author: WuChengXing
  * @create: 2022-11-26 17:10

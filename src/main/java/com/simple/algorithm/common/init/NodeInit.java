@@ -2,6 +2,8 @@ package com.simple.algorithm.common.init;
 
 import com.simple.algorithm.common.model.LinkNode;
 
+import java.util.List;
+
 /**
  * @author WuChengXing
  * @date 2021/10/20
@@ -54,5 +56,14 @@ public class NodeInit {
         LinkNode<Integer> l1 = new LinkNode<>(l2, 2);
         LinkNode<Integer> head = new LinkNode<>(l1, 1);
         return head;
+    }
+
+    public static LinkNode<Integer> initNeed(Integer... list) {
+        LinkNode<Integer> node = new LinkNode<>(-1, null);
+        LinkNode<Integer> point = node;
+        for (Integer integer : list) {
+            point = point.setNext(integer);
+        }
+        return node.next;
     }
 }
