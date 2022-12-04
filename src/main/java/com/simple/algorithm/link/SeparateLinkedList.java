@@ -28,6 +28,10 @@ public class SeparateLinkedList {
         LinkNode<Integer> l1 = small;
         LinkNode<Integer> l2 = large;
         p = node;
+        /**
+         * 这里有个问题需要注意，tmp = p.next每次都是一个新的地址，不同的实力对象；
+         * 所以这里不能直接 p = p.next
+         */
         while (p != null) {
             LinkNode<Integer> tmp = p.next;
             p.next = null;

@@ -22,6 +22,16 @@ public class LinkNode<T> {
         this.val = val;
     }
 
+    /**
+     * 单向链表
+     *
+     * @param val
+     */
+    public LinkNode(T val) {
+        this.next = null;
+        this.val = val;
+    }
+
     public LinkNode<T> setNext(T val) {
         this.next = new LinkNode<T>(val, null);
         return this.next;
