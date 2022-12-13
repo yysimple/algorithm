@@ -14,7 +14,7 @@ import org.junit.Test;
  **/
 public class ReserveNLink {
 
-    LinkNode<Integer> tmp = null;
+    static LinkNode<Integer> tmp = null;
 
     @Test
     public void testResult() {
@@ -22,7 +22,7 @@ public class ReserveNLink {
         System.out.println(reserveNLink(node, 3));
     }
 
-    public LinkNode<Integer> reserveNLink(LinkNode<Integer> node, int n) {
+    public static LinkNode<Integer> reserveNLink(LinkNode<Integer> node, int n) {
         if (n == 1) {
             tmp = node.next;
             return node;
