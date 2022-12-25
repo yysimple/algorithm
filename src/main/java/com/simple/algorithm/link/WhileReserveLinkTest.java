@@ -18,11 +18,25 @@ public class WhileReserveLinkTest {
     public void testResult() {
         LinkNode<Integer> node = NodeInit.initNeed(1, 2, 3, 4, 5);
         System.out.println(LinkNode.printNode(reserve(node)));
+        LinkNode<Integer> node2 = NodeInit.initNeed(1, 2, 3, 4, 5);
+        System.out.println(LinkNode.printNode(reserve(node2.next, node2.next.next.next)));
+
     }
 
     public LinkNode<Integer> reserve(LinkNode<Integer> head) {
         LinkNode<Integer> curr = head, next = head, pre = null;
         while (curr != null) {
+            next = curr.next;
+            curr.next = pre;
+            pre = curr;
+            curr = next;
+        }
+        return pre;
+    }
+
+    public LinkNode<Integer> reserve(LinkNode<Integer> a, LinkNode<Integer> b) {
+        LinkNode<Integer> curr = a, next, pre = null;
+        while (curr != b) {
             next = curr.next;
             curr.next = pre;
             pre = curr;
